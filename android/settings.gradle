@@ -1,0 +1,3 @@
+rootProject.name = 'hai32'
+
+include ':app'
