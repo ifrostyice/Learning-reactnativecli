@@ -9,7 +9,8 @@ import {
   Platform,
   StyleSheet,
   Text,
-  View
+  View,
+  Image
 } from 'react-native';
 
 const instructions = Platform.select({
@@ -33,6 +34,9 @@ export default class App extends Component<Props> {
         <Text style={styles.instructions}>
           {instructions}
         </Text>
+        <Image style={{width: 400, height: 400}} 
+        source={require('./28468165_1923346237684756_8692414226579785525_n.jpg')} 
+        />
       </View>
     );
   }
