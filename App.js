@@ -7,12 +7,14 @@ export default class App extends Component<Props> {
   render() {
     return (
       <View style={styles.container}>
-		<Judul/>
+		<Judul teks="BIODATA"/>
+		<Judul teks="LOGIN"/>
+		<Judul teks="FORM"/>
         <Text style={styles.judul}>Data Diriku</Text>
         <Text style={styles.tulis}>Nama : Tri Aji Sektiantoro</Text>
-		    <Text style={styles.tulis}>No : 32</Text>
-		    <Text style={styles.tulis}>Kelas : XI RPL 4</Text>
-		    <Image source={require('./28468165_1923346237684756_8692414226579785525_n.jpg')} style={{width: 340, height: 433}}/>
+        <Text style={styles.tulis}>No : 32</Text>
+        <Text style={styles.tulis}>Kelas : XI RPL 4</Text>
+        <Image source={require('./28468165_1923346237684756_8692414226579785525_n.jpg')} style={{width: 340, height: 433}}/>
       </View>
     );
   }
