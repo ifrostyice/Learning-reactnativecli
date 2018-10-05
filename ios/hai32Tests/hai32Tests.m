@@ -14,11 +14,11 @@
 #define TIMEOUT_SECONDS 600
 #define TEXT_TO_LOOK_FOR @"Welcome to React Native!"
 
-@interface hai32Tests : XCTestCase
+@interface Hai32Tests : XCTestCase
 
 @end
 
-@implementation hai32Tests
+@implementation Hai32Tests
 
 - (BOOL)findSubviewInView:(UIView *)view matching:(BOOL(^)(UIView *view))test
 {

@@ -1,5 +1,5 @@
 {
-  "name": "hai32",
+  "name": "Hai32",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -8,12 +8,14 @@
   },
   "dependencies": {
     "react": "16.3.1",
-    "react-native": "0.55.4"
+    "react-native": "0.55.4",
+    "react-native-navigation": "^1.1.487",
+    "react-navigation": "^2.17.0"
   },
   "devDependencies": {
-    "babel-jest": "23.4.2",
-    "babel-preset-react-native": "4.0.0",
-    "jest": "23.5.0",
+    "babel-jest": "23.6.0",
+    "babel-preset-react-native": "4.0.1",
+    "jest": "23.6.0",
     "react-test-renderer": "16.3.1"
   },
   "jest": {

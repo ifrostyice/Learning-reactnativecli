@@ -1,16 +1,15 @@
 import React, {Component} from 'react';
 import {Platform, StyleSheet, Text, View, AppRegistry, Image} from 'react-native';
-import Judul from './Components/Judul';
-import { createStackNavigator } from 'react-navigation';
+import Judul from '../Components/Judul';
 
 type Props = {};
-export default class ProfilePage extends Component<Props> {
+export default class App extends Component<Props> {
   render() {
     return (
       <View style={styles.container}>
-    <Judul teks="BIODATA"/>
-    <Judul teks="LOGIN"/>
-    <Judul teks="FORM"/>
+		<Judul teks="BIODATA"/>
+		<Judul teks="LOGIN"/>
+		<Judul teks="FORM"/>
         <Text style={styles.judul}>Data Diriku</Text>
         <Text style={styles.tulis}>Nama : Tri Aji Ssektiantoro</Text>
     <Text style={styles.tulis}>No : 32</Text>
@@ -34,7 +33,7 @@ const styles = StyleSheet.create({
     margin: 10,
   },
   tulis: {
-  fontSize: 24,
+	fontSize: 24,
     textAlign: 'center',
     color: '#333333',
     marginBottom: 5,
