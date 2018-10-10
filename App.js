@@ -1,42 +1,56 @@
-import React, {Component} from 'react';
-import {Platform, StyleSheet, Text, View, AppRegistry, Image} from 'react-native';
-import Judul from './Components/Judul';
-import { createStackNavigator } from 'react-navigation';
 
-type Props = {};
-export default class ProfilePage extends Component<Props> {
+
+
+
+import React, { Component } from 'react';
+import {  Platform,  StyleSheet,  Text,  View,  Image} from 'react-native';
+import Judul from './Components/Judul';
+
+export default class App extends Component {
   render() {
     return (
       <View style={styles.container}>
-    <Judul teks="BIODATA"/>
-    <Judul teks="LOGIN"/>
-    <Judul teks="FORM"/>
-        <Text style={styles.judul}>Data Diriku</Text>
-        <Text style={styles.tulis}>Nama : Tri Aji Ssektiantoro</Text>
-    <Text style={styles.tulis}>No : 32</Text>
-    <Text style={styles.tulis}>Kelas : XI RPL 4</Text>
-    <Image source={require('./img0.jpg')} style={{width: 340, height: 433}}/>
+      <Judul title="BIODATA"/>
+
+      
+      <Image 
+      style={{width:300, height:200}} 
+      source ={require('./me.png')} />
+        <Text style={styles.welcome}>HAI HAI!</Text>
+        <Text style={styles.instructions}>Nama :Tri Aji Sektiantoro</Text>
+        <Text style={styles.instructions}>Kelas : XI RPL 4</Text>
+        <Text style={styles.instructions}>No Absen : 32</Text>
+
       </View>
-    );
+    )
   }
+
+
+
+
+
+
+  
 }
+
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#F5FCFF',
+    backgroundColor: '#32fcc7',
   },
-  judul: {
-    fontSize: 36,
+  welcome: {
+    fontSize: 20,
     textAlign: 'center',
     margin: 10,
+    color: '#04048e',
   },
-  tulis: {
-  fontSize: 24,
+  instructions: {
     textAlign: 'center',
-    color: '#333333',
+    color: '#04048e',
     marginBottom: 5,
   },
-});
+}
+);

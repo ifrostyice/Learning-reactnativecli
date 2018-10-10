@@ -1,4 +1,4 @@
-package com.hai32;
+package com.haihai37;
 
 import com.facebook.react.ReactActivity;
 
@@ -10,6 +10,6 @@ public class MainActivity extends ReactActivity {
      */
     @Override
     protected String getMainComponentName() {
-        return "Hai32";
+        return "haihai37";
     }
 }

@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import {  Platform,  StyleSheet,  Text,  View,  Image, TextInput, TouchableOpacity} from 'react-native';
+import { StackNavigator } from 'react-navigation';
 
-export default class Login extends Component {
+class HomeScreen extends Component {
   render() {
     return(
       <View style={styles.container}>
@@ -17,7 +18,7 @@ export default class Login extends Component {
       placeholder="Password"
       secureTextEntry={true} //sandinya jadi titik-titik
       />
-      <TouchableOpacity style={styles.button}>
+      <TouchableOpacity style={styles.button} onPress={() => this.props.navigation.navigate('Details')}>
           <Text style={styles.buttonText}>MASUK</Text>
       </TouchableOpacity>
 
@@ -57,5 +58,45 @@ const styles = StyleSheet.create ({
     fontSize: 13,
     color:'#f7f7f7',
     
-  }
+  },
+  welcome: {
+    fontSize: 20,
+    textAlign: 'center',
+    margin: 10,
+    color: '#04048e',
+  },
+  instructions: {
+    textAlign: 'center',
+    color: '#04048e',
+    marginBottom: 5,
+  },
 })
+
+class DetailsScreen extends Component {
+    render() {
+        return (
+          <View style={styles.container}>
+            <Text style={styles.welcome}>BIODATA!</Text>
+            <Text style={styles.instructions}>Nama : Zahrotun Mirna Nisa</Text>
+            <Text style={styles.instructions}>Kelas : XI RPL 4</Text>
+            <Text style={styles.instructions}>No Absen : 37</Text>
+            <Image 
+          style={{width:300, height:200}} 
+          source ={require('./me.png')} />
+          </View>
+        )}
+}
+  const RootStack = StackNavigator ({
+      Home : HomeScreen,
+      Details : DetailsScreen,
+  },
+  {
+    initialRouteName: 'Home',
+  }
+);
+
+export default class App extends Component{
+    render(){
+        return <RootStack/>;
+    }
+}
