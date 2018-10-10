@@ -10,8 +10,10 @@ export default class Login extends Component {
       source={require('./FB.png')}
       />
       <TextInput 
-      style={styles.inputBox} 
-      placeholder="Email atau Nomor Telepon"
+      style={styles.inputBox}
+      underlineColorAndroid='rgba(0,0,0,0)' 
+      placeholder="Email"
+      placeholderTextColor = "#ffffff"
       />
       <TextInput style={styles.inputBox} 
       placeholder="Password"
@@ -22,7 +24,7 @@ export default class Login extends Component {
       </TouchableOpacity>
 
       <TouchableOpacity >
-      <Text>Lupa Kata Sandi?</Text>
+      <Text>Forgot Password?</Text>
       </TouchableOpacity>
       </View>
     )
@@ -32,14 +34,17 @@ export default class Login extends Component {
 const styles = StyleSheet.create ({
   container: {
     flex:1,
-    backgroundColor: '#ffffff',
+    backgroundColor: '#455a64',
     alignItems: 'center',
     justifyContent: 'center'
   },
   inputBox: {
-    width:250,
-    fontSize: 13,
-    color:'#000000'
+    width:300,
+    backgroundColor:'rgba(255, 255, 255, 0.3)',
+    borderRadius: 25,
+    paddingHorizontal:16,
+    fontSize: 16,
+    color:'#ffffff'
   },
 
   button:{
@@ -47,7 +52,7 @@ const styles = StyleSheet.create ({
     height: 40,
     alignItems: 'center',
     justifyContent:'center',
-    backgroundColor: '#3B5998',
+    backgroundColor: '#',
     marginVertical: 10,
     paddingHorizontal: 80
     
@@ -55,7 +60,7 @@ const styles = StyleSheet.create ({
 
   buttonText:{
     fontSize: 13,
-    color:'#f7f7f7',
+    color:'#ffffff',
     
   }
 })

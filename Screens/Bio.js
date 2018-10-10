@@ -6,24 +6,26 @@ class HomeScreen extends Component {
   render() {
     return(
       <View style={styles.container}>
-      <Image 
-      style={{width:70, height:50}}
-      source={require('./FB.png')}
-      />
+      <Image style={{width:40, height:70}}
+      source={require('./FB.png')}/>
+      <Text style={styles.logoText}>Welcome to My Apps.</Text>
       <TextInput 
       style={styles.inputBox} 
-      placeholder="Email atau Nomor Telepon"
+      underlineColorAndroid='rgba(0,0,0,0)'
+      placeholder="Email"
+      placeholderTextColor="#ffffff"
       />
       <TextInput style={styles.inputBox} 
       placeholder="Password"
+      placeholderTextColor="#ffffff"
       secureTextEntry={true} //sandinya jadi titik-titik
       />
       <TouchableOpacity style={styles.button} onPress={() => this.props.navigation.navigate('Details')}>
-          <Text style={styles.buttonText}>MASUK</Text>
+          <Text style={styles.buttonText}>Login</Text>
       </TouchableOpacity>
 
       <TouchableOpacity >
-      <Text>Lupa Kata Sandi?</Text>
+      <Text style={styles.instructions}>Lupa Kata Sandi?</Text>
       </TouchableOpacity>
       </View>
     )
@@ -33,41 +35,50 @@ class HomeScreen extends Component {
 const styles = StyleSheet.create ({
   container: {
     flex:1,
-    backgroundColor: '#ffffff',
-    alignItems: 'center',
-    justifyContent: 'center'
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: "#455a64"
+  },
+  logoText :{
+    marginVertical: 15,
+    fontSize:16,
+    color: 'rgba(255, 255, 255, 0.7)'
   },
   inputBox: {
-    width:250,
+    width:300,
+    backgroundColor: 'rgba(255, 255, 255, 0.3)',
+    borderRadius: 25,
+    paddingHorizontal: 16,
     fontSize: 13,
-    color:'#000000'
+    color:'#ffffff',
+    marginVertical: 10,
   },
 
   button:{
-    width:250,    
-    height: 40,
-    alignItems: 'center',
-    justifyContent:'center',
-    backgroundColor: '#3B5998',
+    width:300,    
+    backgroundColor: 'rgba(255, 255, 255, 0.3)',
+    borderRadius: 25,
     marginVertical: 10,
-    paddingHorizontal: 80
-    
+    paddingVertical: 12
   },
 
   buttonText:{
-    fontSize: 13,
-    color:'#f7f7f7',
+    fontSize: 16,
+    fontWeight: '500',
+    color:'#ffffff',
+    textAlign: "center",
+    
     
   },
   welcome: {
     fontSize: 20,
     textAlign: 'center',
     margin: 10,
-    color: '#04048e',
+    color: '#ffffff',
   },
   instructions: {
     textAlign: 'center',
-    color: '#04048e',
+    color: 'rgba(255, 255, 255, 0.7)',
     marginBottom: 5,
   },
 })
@@ -77,12 +88,12 @@ class DetailsScreen extends Component {
         return (
           <View style={styles.container}>
             <Text style={styles.welcome}>BIODATA!</Text>
-            <Text style={styles.instructions}>Nama : Zahrotun Mirna Nisa</Text>
+            <Text style={styles.instructions}>Nama : Tri Aji Sektiantoro</Text>
             <Text style={styles.instructions}>Kelas : XI RPL 4</Text>
-            <Text style={styles.instructions}>No Absen : 37</Text>
+            <Text style={styles.instructions}>No Absen : 32</Text>
             <Image 
           style={{width:300, height:200}} 
-          source ={require('./me.png')} />
+          source ={require('./me.jpg')} />
           </View>
         )}
 }
